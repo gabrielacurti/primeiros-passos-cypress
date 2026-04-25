@@ -33,6 +33,11 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorsList.genericField).eq(5).clear().type('Driver\'s LicenceNumberTest')
     cy.get(selectorsList.genericField).eq(6).clear({force: true}).type('2025-03-10', {force: true})
     cy.contains('Close').click()
+    cy.get(':nth-child(5) > :nth-child(1) > :nth-child(1) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon').click()
+    cy.get('.oxd-select-dropdown > :nth-child(3)')
+    cy.get(':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text > .oxd-select-text--after > .oxd-icon').click()
+    cy.get('.oxd-select-dropdown > :nth-child(3)').click()
+    cy.get(':nth-child(2) > :nth-child(2) > .oxd-radio-wrapper > label').click(), {force: true}
     cy.get(selectorsList.saveButton).eq(0).click()
     cy.get('body').should('contain', 'Successfully Update')
   })
