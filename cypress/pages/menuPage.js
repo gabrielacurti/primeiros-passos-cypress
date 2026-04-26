@@ -17,6 +17,4 @@ class MenuPage {
 }
 
 
-
-
 export default MenuPage
